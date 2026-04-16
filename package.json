@@ -1,0 +1,42 @@
+{
+  "name": "copy-code-location",
+  "displayName": "Copy Code Location",
+  "description": "Copy code location (file:line) to clipboard",
+  "version": "0.0.1",
+  "publisher": "yourname",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copy-code-location.copyLocation",
+        "title": "Copy Code Location"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "copy-code-location.copyLocation",
+          "when": "editor.hasSelection",
+          "group": "clipboard"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
