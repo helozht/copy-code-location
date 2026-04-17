@@ -6,7 +6,7 @@ Copy code location (file:line) to clipboard.
 
 1. Select code in editor
 2. Right-click → **Copy Code Location**
-3. Paste the location (e.g., `@proxy.js#L10-17`)
+3. Paste the location (e.g., `@src/extension.ts#L10-17`)
 
 ## Development
 
